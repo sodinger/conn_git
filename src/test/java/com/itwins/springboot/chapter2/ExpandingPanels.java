@@ -77,23 +77,23 @@ public class ExpandingPanels extends MouseAdapter {
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         JPanel p1 = new JPanel(new GridBagLayout());
-        gbc.gridwidth = gbc.RELATIVE;
+        gbc.gridwidth = GridBagConstraints.RELATIVE;
         p1.add(new JButton("button 1"), gbc);
-        gbc.gridwidth = gbc.REMAINDER;
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
         p1.add(new JButton("button 2"), gbc);
-        gbc.gridwidth = gbc.RELATIVE;
+        gbc.gridwidth = GridBagConstraints.RELATIVE;
         p1.add(new JButton("button 3"), gbc);
-        gbc.gridwidth = gbc.REMAINDER;
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
         p1.add(new JButton("button 4"), gbc);
         JPanel p2 = new JPanel(new GridBagLayout());
         gbc.gridwidth = 1;
-        gbc.anchor = gbc.EAST;
+        gbc.anchor = GridBagConstraints.EAST;
         p2.add(new JLabel("enter"), gbc);
-        gbc.anchor = gbc.WEST;
+        gbc.anchor = GridBagConstraints.WEST;
         p2.add(new JTextField(8), gbc);
-        gbc.anchor = gbc.CENTER;
+        gbc.anchor = GridBagConstraints.CENTER;
         p2.add(new JButton("button 1"), gbc);
-        gbc.gridwidth = gbc.REMAINDER;
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
         p2.add(new JButton("button 2"), gbc);
         JPanel p3 = new JPanel(new BorderLayout());
         JTextArea textArea = new JTextArea(8, 12);
@@ -112,20 +112,20 @@ public class ExpandingPanels extends MouseAdapter {
         p5.add(new JButton("button 3"), gbc);
         p5.add(new JButton("button 4"), gbc);
         gbc.weighty = 1.0;
-        gbc.fill = gbc.BOTH;
+        gbc.fill = GridBagConstraints.BOTH;
         p4.add(p5, gbc);
         panels = new JPanel[] { p1, p2, p3, p4 };
     }
  
     private void addComponents(Component c1, Component c2, Container c,
             GridBagConstraints gbc) {
-        gbc.anchor = gbc.EAST;
-        gbc.gridwidth = gbc.RELATIVE;
+        gbc.anchor = GridBagConstraints.EAST;
+        gbc.gridwidth = GridBagConstraints.RELATIVE;
         c.add(c1, gbc);
-        gbc.anchor = gbc.WEST;
-        gbc.gridwidth = gbc.REMAINDER;
+        gbc.anchor = GridBagConstraints.WEST;
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
         c.add(c2, gbc);
-        gbc.anchor = gbc.CENTER;
+        gbc.anchor = GridBagConstraints.CENTER;
     }
  
     private JPanel getComponent() {
@@ -133,8 +133,8 @@ public class ExpandingPanels extends MouseAdapter {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(1, 3, 0, 3);
         gbc.weightx = 1.0;
-        gbc.fill = gbc.HORIZONTAL;
-        gbc.gridwidth = gbc.REMAINDER;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
         for (int j = 0; j < aps.length; j++) {
             panel.add(aps[j], gbc);
             panel.add(panels[j], gbc);
@@ -158,6 +158,10 @@ public class ExpandingPanels extends MouseAdapter {
 }
  
 class ActionPanel extends JPanel {
+    /**
+     *
+     */
+    private static final long serialVersionUID = -7959482402101984914L;
     String text;
     Font font;
     private boolean selected;
@@ -188,7 +192,7 @@ class ActionPanel extends JPanel {
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                 RenderingHints.VALUE_ANTIALIAS_ON);
-        int w = getWidth();
+//        int w = getWidth();
         int h = getHeight();
         if (selected)
             g2.drawImage(open, PAD, 0, this);
