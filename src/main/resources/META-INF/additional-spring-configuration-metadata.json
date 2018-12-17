@@ -1,0 +1,42 @@
+{"properties": [
+  {
+    "name": "sboot.desc",
+    "type": "java.lang.String",
+    "description": "A description for 'sboot.desc'"
+  },
+  {
+    "name": "sboot.name",
+    "type": "java.lang.String",
+    "description": "A description for 'sboot.name'"
+  },
+  {
+    "name": "sboot.age",
+    "type": "java.lang.String",
+    "description": "A description for 'sboot.age'"
+  },
+  {
+    "name": "blog.value",
+    "type": "java.lang.String",
+    "description": "A description for 'blog.value'"
+  },
+  {
+    "name": "blog.number",
+    "type": "java.lang.String",
+    "description": "A description for 'blog.number'"
+  },
+  {
+    "name": "blog.bignumber",
+    "type": "java.lang.String",
+    "description": "A description for 'blog.bignumber'"
+  },
+  {
+    "name": "blog.test1",
+    "type": "java.lang.String",
+    "description": "A description for 'blog.test1'"
+  },
+  {
+    "name": "blog.test2",
+    "type": "java.lang.String",
+    "description": "A description for 'blog.test2'"
+  }
+]}
